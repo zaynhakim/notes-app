@@ -8,7 +8,24 @@ import sortBy from "sort-by";
 export async function getNotes(query) {
   await fakeNetwork(`getNotes:${query}`);
   let notes = await localforage.getItem("notes");
-  if (!notes) notes = [];
+  if (!notes)
+    notes = [
+      {
+        id: "note-001",
+        title: "What is Tabindex?",
+        description:
+          "The `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).",
+        body: "# tabindex\nThe `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).",
+        createdAt: 1667028916689,
+      },
+      {
+        id: "note-002",
+        title: "Hello World!",
+        description: "This is a note",
+        body: "# Hey There\nHow are you doing?",
+        createdAt: 1667028916687,
+      },
+    ];
   if (query) {
     notes = matchSorter(notes, query, { keys: ["createdAt", "title"] });
   }
@@ -81,7 +98,7 @@ export const showFormattedDate = (date, locale) => {
     weekday: "long",
     year: "numeric",
     month: "long",
-    day: "numeric"
+    day: "numeric",
   };
   return new Date(date).toLocaleDateString(locale, options);
 };
