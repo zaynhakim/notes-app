@@ -24,7 +24,7 @@ export default function TopNav() {
         <nav className="navigation">
           <ul>
             <li>
-              <Link to="/archives">
+              <Link to="/">
                 <span className="app-icon" title="Archives">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
