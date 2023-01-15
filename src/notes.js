@@ -11,7 +11,7 @@ const starterNotes = [
     title: "What is Tabindex?",
     description:
       "The `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).",
-    body: "# tabindex\nThe `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).",
+    body: "### tabindex\nThe `tabindex` global attribute indicates that its element can be focused, and where it participates in sequential keyboard navigation (usually with the Tab key, hence the name).",
     createdAt: 1667028916689,
   },
   {
@@ -19,7 +19,7 @@ const starterNotes = [
     title: "Vanilla CSS is Awesome!",
     description:
       "Did you know that you can create an artwork just using vanilla CSS in an HTML file?",
-    body: "# Write your own CSS artwork now!\nGrab your keyboard and start creating awesome art!",
+    body: "### Write your own CSS artwork now!\nGrab your keyboard and start creating awesome art!",
     createdAt: 1667028916687,
   },
 ];
