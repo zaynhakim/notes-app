@@ -48,7 +48,7 @@ export default function Home() {
             </Link>
           ))
         ) : (
-          <p>Try to create one note</p>
+          <p>Try to create a note</p>
         )}
       </div>
     </div>
