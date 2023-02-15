@@ -28,7 +28,7 @@ export async function getNotes(query) {
   await fakeNetwork(`getNotes:${query}`);
   let notes = await localforage.getItem("notes");
   if (!notes) notes = [];
-  await set(starterNotes);
+  if (notes.length === 0) await set(starterNotes);
   if (query) {
     notes = matchSorter(notes, query, { keys: ["createdAt", "title"] });
   }
