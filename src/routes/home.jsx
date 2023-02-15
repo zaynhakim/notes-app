@@ -48,7 +48,7 @@ export default function Home() {
             </Link>
           ))
         ) : (
-          <p>Nothing to see here</p>
+          <p>Try to create a note</p>
         )}
       </div>
     </div>
